@@ -1,0 +1,5 @@
+Metric,Baseline,Enhanced
+K-Means Clusters,3.0,2.0
+K-Means Silhouette,0.2403,0.1894
+DBSCAN Clusters,5.0,12.0
+DBSCAN Silhouette,0.1409,0.2801
