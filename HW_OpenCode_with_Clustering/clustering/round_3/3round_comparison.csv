@@ -1,7 +1,0 @@
-Round,Model,Clusters,Silhouette,Techniques
-1,K-Means,3,0.2403,Raw data
-1,DBSCAN,5,0.1409,Raw data
-2,K-Means,2,0.1894,"+ Outlier removal, Feature engineering"
-2,DBSCAN,12,0.2801,"+ Outlier removal, Feature engineering"
-3,K-Means,2,0.1894,"+ Hopkins, t-SNE, Davies-Bouldin, Silhouette plot, Business rec"
-3,DBSCAN,3,0.0753,"+ Fine-tuned eps, Davies-Bouldin"
