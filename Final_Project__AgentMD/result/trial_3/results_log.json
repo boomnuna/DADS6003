@@ -1,0 +1,212 @@
+[
+  {
+    "model": "LightGBM_baseline",
+    "timestamp": "2026-05-27T08:21:47.424406",
+    "threshold": 0.5,
+    "ROC_AUC": 0.948046,
+    "PR_AUC": 0.139012,
+    "F1": 0.140251,
+    "Precision": 0.076588,
+    "Recall": 0.831081,
+    "Confusion_Matrix": [
+      [
+        83812,
+        1483
+      ],
+      [
+        25,
+        123
+      ]
+    ],
+    "notes": "Baseline LightGBM with scale_pos_weight, no resampling"
+  },
+  {
+    "model": "LightGBM_baseline",
+    "timestamp": "2026-05-27T08:22:08.235000",
+    "threshold": 0.5,
+    "ROC_AUC": 0.948046,
+    "PR_AUC": 0.139012,
+    "F1": 0.140251,
+    "Precision": 0.076588,
+    "Recall": 0.831081,
+    "Confusion_Matrix": [
+      [
+        83812,
+        1483
+      ],
+      [
+        25,
+        123
+      ]
+    ],
+    "notes": "Baseline LightGBM with scale_pos_weight, no resampling"
+  },
+  {
+    "model": "LightGBM_SMOTE",
+    "timestamp": "2026-05-27T08:22:12.840108",
+    "threshold": 0.5,
+    "ROC_AUC": 0.967022,
+    "PR_AUC": 0.459407,
+    "F1": 0.363368,
+    "Precision": 0.232514,
+    "Recall": 0.831081,
+    "Confusion_Matrix": [
+      [
+        84889,
+        406
+      ],
+      [
+        25,
+        123
+      ]
+    ],
+    "notes": "LightGBM with SMOTE oversampling"
+  },
+  {
+    "model": "LightGBM_SMOTETomek",
+    "timestamp": "2026-05-27T08:24:34.791753",
+    "threshold": 0.5,
+    "ROC_AUC": 0.967022,
+    "PR_AUC": 0.459407,
+    "F1": 0.363368,
+    "Precision": 0.232514,
+    "Recall": 0.831081,
+    "Confusion_Matrix": [
+      [
+        84889,
+        406
+      ],
+      [
+        25,
+        123
+      ]
+    ],
+    "notes": "LightGBM with SMOTETomek"
+  },
+  {
+    "model": "XGBoost",
+    "timestamp": "2026-05-27T08:24:39.509590",
+    "threshold": 0.5,
+    "ROC_AUC": 0.973234,
+    "PR_AUC": 0.770107,
+    "F1": 0.630769,
+    "Precision": 0.508264,
+    "Recall": 0.831081,
+    "Confusion_Matrix": [
+      [
+        85176,
+        119
+      ],
+      [
+        25,
+        123
+      ]
+    ],
+    "notes": "XGBoost with scale_pos_weight"
+  },
+  {
+    "model": "RandomForest",
+    "timestamp": "2026-05-27T08:25:44.661877",
+    "threshold": 0.5,
+    "ROC_AUC": 0.952051,
+    "PR_AUC": 0.830166,
+    "F1": 0.824903,
+    "Precision": 0.972477,
+    "Recall": 0.716216,
+    "Confusion_Matrix": [
+      [
+        85292,
+        3
+      ],
+      [
+        42,
+        106
+      ]
+    ],
+    "notes": "Random Forest with class_weight='balanced'"
+  },
+  {
+    "model": "LogisticRegression",
+    "timestamp": "2026-05-27T08:25:49.118996",
+    "threshold": 0.5,
+    "ROC_AUC": 0.974049,
+    "PR_AUC": 0.6889,
+    "F1": 0.123386,
+    "Precision": 0.066392,
+    "Recall": 0.871622,
+    "Confusion_Matrix": [
+      [
+        83481,
+        1814
+      ],
+      [
+        19,
+        129
+      ]
+    ],
+    "notes": "Logistic Regression with class_weight='balanced', C=0.01"
+  },
+  {
+    "model": "LightGBM_Optuna",
+    "timestamp": "2026-05-27T08:27:05.848726",
+    "threshold": 0.5,
+    "ROC_AUC": 0.9772,
+    "PR_AUC": 0.77489,
+    "F1": 0.72956,
+    "Precision": 0.682353,
+    "Recall": 0.783784,
+    "Confusion_Matrix": [
+      [
+        85241,
+        54
+      ],
+      [
+        32,
+        116
+      ]
+    ],
+    "notes": "Optuna-tuned LightGBM, 0.977200 AUC, params: {'learning_rate': 0.006119829518332446, 'num_leaves': 104, 'max_depth': 10, 'min_child_samples': 69, 'subsample': 0.9676060249380464, 'colsample_bytree': 0.6371936271543396, 'reg_alpha': 0.014219778781356678, 'reg_lambda': 0.00039919052193065294}"
+  },
+  {
+    "model": "Ensemble_LGBM_XGB_RF",
+    "timestamp": "2026-05-27T08:27:05.921546",
+    "threshold": 0.5,
+    "ROC_AUC": 0.977484,
+    "PR_AUC": 0.808438,
+    "F1": 0.765677,
+    "Precision": 0.748387,
+    "Recall": 0.783784,
+    "Confusion_Matrix": [
+      [
+        85256,
+        39
+      ],
+      [
+        32,
+        116
+      ]
+    ],
+    "notes": "Weighted ensemble: 0.5*LightGBM + 0.3*XGBoost + 0.2*RandomForest"
+  },
+  {
+    "model": "LightGBM_Optuna_ThreshOpt",
+    "timestamp": "2026-05-27T08:27:06.032836",
+    "threshold": 0.8000000000000002,
+    "ROC_AUC": 0.9772,
+    "PR_AUC": 0.77489,
+    "F1": 0.8,
+    "Precision": 0.832117,
+    "Recall": 0.77027,
+    "Confusion_Matrix": [
+      [
+        85272,
+        23
+      ],
+      [
+        34,
+        114
+      ]
+    ],
+    "notes": "Optuna LightGBM with F1-optimized threshold=0.80"
+  }
+]

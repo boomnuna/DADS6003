@@ -1,0 +1,107 @@
+[
+  {
+    "model": "LightGBM_v4_FeatureA",
+    "timestamp": "2026-05-27T10:42:44.078344",
+    "threshold": 0.5,
+    "ROC_AUC": 0.979603,
+    "PR_AUC": 0.706109,
+    "F1": 0.0,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "Confusion_Matrix": [
+      [
+        85295,
+        0
+      ],
+      [
+        148,
+        0
+      ]
+    ],
+    "notes": "Feature Set A + new interactions. Params: {'learning_rate': 0.0037144486929402026, 'num_leaves': 106, 'max_depth': 13, 'min_child_samples': 20, 'subsample': 0.7017397291364981, 'subsample_freq': 7, 'colsample_bytree': 0.5146454594295639, 'reg_alpha': 2.5300808555599432e-05, 'reg_lambda': 0.3093560996757482, 'min_split_gain': 1.2720148247709978e-05}"
+  },
+  {
+    "model": "XGBoost_v4_FeatureB",
+    "timestamp": "2026-05-27T10:42:44.113029",
+    "threshold": 0.5,
+    "ROC_AUC": 0.983986,
+    "PR_AUC": 0.837638,
+    "F1": 0.808081,
+    "Precision": 0.805369,
+    "Recall": 0.810811,
+    "Confusion_Matrix": [
+      [
+        85266,
+        29
+      ],
+      [
+        28,
+        120
+      ]
+    ],
+    "notes": "Feature Set B + V3/V1/V9. Params: {'learning_rate': 0.05582174338679025, 'max_depth': 5, 'min_child_weight': 16, 'subsample': 0.5661340575293944, 'colsample_bytree': 0.6521405905279493, 'colsample_bylevel': 0.4659569160356848, 'colsample_bynode': 0.6764018630902684, 'reg_alpha': 0.0020636476317891315, 'reg_lambda': 0.10809006680843743, 'gamma': 0.3060011198040548}"
+  },
+  {
+    "model": "CatBoost_v4_FeatureA",
+    "timestamp": "2026-05-27T10:42:44.157401",
+    "threshold": 0.5,
+    "ROC_AUC": 0.98159,
+    "PR_AUC": 0.83077,
+    "F1": 0.811881,
+    "Precision": 0.793548,
+    "Recall": 0.831081,
+    "Confusion_Matrix": [
+      [
+        85263,
+        32
+      ],
+      [
+        25,
+        123
+      ]
+    ],
+    "notes": "Feature Set A (switched from B). Params: {'learning_rate': 0.049695017853718784, 'depth': 8, 'l2_leaf_reg': 1.2513269585697901, 'bagging_temperature': 0.8221313491452527, 'random_strength': 0.0013282608383001218, 'border_count': 230, 'min_data_in_leaf': 19}"
+  },
+  {
+    "model": "HGB_v4_FeatureB",
+    "timestamp": "2026-05-27T10:42:44.217710",
+    "threshold": 0.5,
+    "ROC_AUC": 0.97462,
+    "PR_AUC": 0.779904,
+    "F1": 0.643052,
+    "Precision": 0.538813,
+    "Recall": 0.797297,
+    "Confusion_Matrix": [
+      [
+        85194,
+        101
+      ],
+      [
+        30,
+        118
+      ]
+    ],
+    "notes": "New model. Params: {'learning_rate': 0.010136632473950823, 'max_depth': 10, 'max_leaf_nodes': 92, 'min_samples_leaf': 94, 'l2_regularization': 0.00010495147826244112, 'max_features': 0.5537798302163109}"
+  },
+  {
+    "model": "Ensemble_v4_SmartWeights",
+    "timestamp": "2026-05-27T10:42:44.271799",
+    "threshold": 0.5,
+    "ROC_AUC": 0.984651,
+    "PR_AUC": 0.839867,
+    "F1": 0.819113,
+    "Precision": 0.827586,
+    "Recall": 0.810811,
+    "Confusion_Matrix": [
+      [
+        85270,
+        25
+      ],
+      [
+        28,
+        120
+      ]
+    ],
+    "notes": "Only models AUC>=0.975 included. w_lgb=0.091, w_xgb=0.691, w_cat=0.218"
+  }
+]

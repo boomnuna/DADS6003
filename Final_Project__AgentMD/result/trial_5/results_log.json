@@ -1,0 +1,86 @@
+[
+  {
+    "model": "LightGBM_v3_FeatureA",
+    "timestamp": "2026-05-27T09:43:20.443501",
+    "threshold": 0.5,
+    "ROC_AUC": 0.978613,
+    "PR_AUC": 0.736119,
+    "F1": 0.0,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "Confusion_Matrix": [
+      [
+        85295,
+        0
+      ],
+      [
+        148,
+        0
+      ]
+    ],
+    "notes": "Clean feature set A. Params: {'learning_rate': 0.0031875611340048235, 'num_leaves': 123, 'max_depth': 12, 'min_child_samples': 44, 'subsample': 0.6568547666881658, 'subsample_freq': 8, 'colsample_bytree': 0.5009626703170273, 'reg_alpha': 0.00011733347599430621, 'reg_lambda': 0.05423484654969133, 'min_split_gain': 0.0002385433529506959}"
+  },
+  {
+    "model": "XGBoost_v3_FeatureB",
+    "timestamp": "2026-05-27T09:43:20.491156",
+    "threshold": 0.5,
+    "ROC_AUC": 0.979448,
+    "PR_AUC": 0.826284,
+    "F1": 0.789474,
+    "Precision": 0.769231,
+    "Recall": 0.810811,
+    "Confusion_Matrix": [
+      [
+        85259,
+        36
+      ],
+      [
+        28,
+        120
+      ]
+    ],
+    "notes": "Rich feature set B. Params: {'learning_rate': 0.07170140811609398, 'max_depth': 6, 'min_child_weight': 20, 'subsample': 0.6491672661478336, 'colsample_bytree': 0.6137721502377332, 'colsample_bylevel': 0.47803431124285783, 'reg_alpha': 0.001165426174627445, 'reg_lambda': 0.03167754009145953, 'gamma': 0.18031887321335066}"
+  },
+  {
+    "model": "CatBoost_v3_FeatureB",
+    "timestamp": "2026-05-27T09:43:20.541478",
+    "threshold": 0.5,
+    "ROC_AUC": 0.975619,
+    "PR_AUC": 0.815136,
+    "F1": 0.753165,
+    "Precision": 0.708333,
+    "Recall": 0.804054,
+    "Confusion_Matrix": [
+      [
+        85246,
+        49
+      ],
+      [
+        29,
+        119
+      ]
+    ],
+    "notes": "Rich feature set B. Params: {'learning_rate': 0.02193601390058861, 'depth': 9, 'l2_leaf_reg': 1.5521064910815123, 'bagging_temperature': 0.41860066154005326, 'random_strength': 0.007474177810503351, 'border_count': 240}"
+  },
+  {
+    "model": "Ensemble_v3_cat_lgb_xgb",
+    "timestamp": "2026-05-27T09:43:20.591082",
+    "threshold": 0.5,
+    "ROC_AUC": 0.981,
+    "PR_AUC": 0.822677,
+    "F1": 0.797342,
+    "Precision": 0.784314,
+    "Recall": 0.810811,
+    "Confusion_Matrix": [
+      [
+        85262,
+        33
+      ],
+      [
+        28,
+        120
+      ]
+    ],
+    "notes": "Ensemble weights: {'lgb': 0.28707917397753513, 'xgb': 0.6953305639842048, 'cat': 0.017590262038260085}"
+  }
+]

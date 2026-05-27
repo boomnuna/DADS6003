@@ -1,0 +1,65 @@
+[
+  {
+    "model": "LightGBM_Optuna_v2",
+    "timestamp": "2026-05-27T08:54:11.221200",
+    "threshold": 0.5,
+    "ROC_AUC": 0.975245,
+    "PR_AUC": 0.660153,
+    "F1": 0.724528,
+    "Precision": 0.820513,
+    "Recall": 0.648649,
+    "Confusion_Matrix": [
+      [
+        85274,
+        21
+      ],
+      [
+        52,
+        96
+      ]
+    ],
+    "notes": "v2 features, 100 trials. Best params: {'learning_rate': 0.009573113054494126, 'num_leaves': 326, 'max_depth': 15, 'min_child_samples': 93, 'subsample': 0.8072573850705463, 'subsample_freq': 10, 'colsample_bytree': 0.4434036301887514, 'reg_alpha': 0.4906575657417739, 'reg_lambda': 0.00018067096353970087, 'min_split_gain': 0.011414078723008208}"
+  },
+  {
+    "model": "XGBoost_Optuna_v2",
+    "timestamp": "2026-05-27T08:54:11.263668",
+    "threshold": 0.5,
+    "ROC_AUC": 0.978627,
+    "PR_AUC": 0.683756,
+    "F1": 0.654155,
+    "Precision": 0.542222,
+    "Recall": 0.824324,
+    "Confusion_Matrix": [
+      [
+        85192,
+        103
+      ],
+      [
+        26,
+        122
+      ]
+    ],
+    "notes": "v2 features, 100 trials. Best params: {'learning_rate': 0.04651176185097904, 'max_depth': 7, 'min_child_weight': 14, 'subsample': 0.6727738931586088, 'colsample_bytree': 0.7136963952585982, 'colsample_bylevel': 0.47730882770160676, 'reg_alpha': 0.00669889291263583, 'reg_lambda': 0.024816533260591783, 'gamma': 0.2757459958704394}"
+  },
+  {
+    "model": "Ensemble_v2_OptWeights",
+    "timestamp": "2026-05-27T08:54:11.311145",
+    "threshold": 0.5,
+    "ROC_AUC": 0.978628,
+    "PR_AUC": 0.686388,
+    "F1": 0.654155,
+    "Precision": 0.542222,
+    "Recall": 0.824324,
+    "Confusion_Matrix": [
+      [
+        85192,
+        103
+      ],
+      [
+        26,
+        122
+      ]
+    ],
+    "notes": "Optuna weight search. w_lgb=0.000"
+  }
+]
