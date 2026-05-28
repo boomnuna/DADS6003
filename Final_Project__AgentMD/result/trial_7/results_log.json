@@ -1,0 +1,86 @@
+[
+  {
+    "model": "LightGBM_v5_DART",
+    "timestamp": "2026-05-28T16:48:51.833965",
+    "threshold": 0.5,
+    "ROC_AUC": 0.982915,
+    "PR_AUC": 0.842776,
+    "F1": 0.85,
+    "Precision": 0.901515,
+    "Recall": 0.804054,
+    "Confusion_Matrix": [
+      [
+        85282,
+        13
+      ],
+      [
+        29,
+        119
+      ]
+    ],
+    "notes": "DART booster experiment. booster=dart. Params: {'boosting_type': 'dart', 'learning_rate': 0.013688935371949184, 'num_leaves': 82, 'max_depth': 14, 'min_child_samples': 58, 'subsample': 0.5091775930154168, 'subsample_freq': 8, 'colsample_bytree': 0.5410001957867684, 'reg_alpha': 0.019516752804237352, 'reg_lambda': 0.11359133869829893, 'min_split_gain': 0.0018494506267569487, 'drop_rate': 0.20364714379572726, 'skip_drop': 0.6092651498703527, 'max_drop': 12}"
+  },
+  {
+    "model": "XGBoost_v5_200trials",
+    "timestamp": "2026-05-28T16:48:51.897423",
+    "threshold": 0.5,
+    "ROC_AUC": 0.984247,
+    "PR_AUC": 0.803703,
+    "F1": 0.696884,
+    "Precision": 0.6,
+    "Recall": 0.831081,
+    "Confusion_Matrix": [
+      [
+        85213,
+        82
+      ],
+      [
+        25,
+        123
+      ]
+    ],
+    "notes": "200 Optuna trials, narrow search. Params: {'learning_rate': 0.06165156755891795, 'max_depth': 4, 'min_child_weight': 20, 'subsample': 0.7021844308115144, 'colsample_bytree': 0.7216519482878888, 'colsample_bylevel': 0.5057256983852977, 'colsample_bynode': 0.658104259926809, 'reg_alpha': 0.013243134201592488, 'reg_lambda': 0.16939339957327848, 'gamma': 0.6626115480507068}"
+  },
+  {
+    "model": "CatBoost_v5_FeatureA",
+    "timestamp": "2026-05-28T16:48:51.944945",
+    "threshold": 0.5,
+    "ROC_AUC": 0.983429,
+    "PR_AUC": 0.830155,
+    "F1": 0.812081,
+    "Precision": 0.806667,
+    "Recall": 0.817568,
+    "Confusion_Matrix": [
+      [
+        85266,
+        29
+      ],
+      [
+        27,
+        121
+      ]
+    ],
+    "notes": "Fine-tuned on Feature Set A. Params: {'learning_rate': 0.05768958486674426, 'depth': 10, 'l2_leaf_reg': 1.1693654224151813, 'bagging_temperature': 0.5719467778941552, 'random_strength': 0.008339846941156042, 'border_count': 239, 'min_data_in_leaf': 12}"
+  },
+  {
+    "model": "Ensemble_v5_rank_average",
+    "timestamp": "2026-05-28T16:48:51.992388",
+    "threshold": 0.5,
+    "ROC_AUC": 0.987044,
+    "PR_AUC": 0.835309,
+    "F1": 0.007132,
+    "Precision": 0.003579,
+    "Recall": 1.0,
+    "Confusion_Matrix": [
+      [
+        44089,
+        41206
+      ],
+      [
+        0,
+        148
+      ]
+    ],
+    "notes": "Method: rank_average. w_lgb=0.943, w_xgb=0.003, w_cat=0.054"
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "ensemble_done": true,
+  "ensemble_method": "rank_average",
+  "ensemble_auc": 0.9870442486568871
+}
