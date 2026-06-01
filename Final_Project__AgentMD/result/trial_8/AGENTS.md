@@ -3,12 +3,19 @@
 ## Current Best Result
 | Model | ROC-AUC |
 |---|---|
-| Ensemble_v5 (rank_average) | **0.987044** ← beat this |
-| LightGBM_DART_v5 | 0.982915 (94.3% ensemble weight) |
-| CatBoost_v5 | 0.983429 |
-| XGBoost_v5 | 0.984247 |
+| **Ensemble_v6 (rank_average)** | **0.988156** 🎉 beat goal |
+| XGBoost_gbdt_v6 | 0.983983 |
+| CatBoost_v6 | 0.982350 |
+| LightGBM_DART1_v6 | 0.981671 |
+| Ensemble_v5 (rank_average) | 0.987044 ← previous best |
 
-**Goal: Push ROC-AUC above 0.988**
+**Goal: Push ROC-AUC above 0.988 — ACHIEVED!** 🎯
+
+### Critical Lessons from v6
+1. **DART is non-deterministic** — saving the best model DURING optuna is essential; retraining with same params+seed gives different (worse) results (0.982 → 0.960)
+2. **New v6 polynomial/interaction features DEGRADED performance** — v5's simpler feature set (49 cols vs 60) worked better
+3. **XGBoost gbdt (not dart)** was the strongest individual model (0.984), faster to tune, and deterministic
+4. **3-model ensemble** (DART#1 + XGBoost + CatBoost) beat the 0.988 barrier
 
 ---
 

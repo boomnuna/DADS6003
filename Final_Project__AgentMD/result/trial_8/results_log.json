@@ -1,0 +1,338 @@
+[
+  {
+    "model": "LightGBM_DART1_v6",
+    "timestamp": "2026-06-01T21:24:48.666478",
+    "threshold": 0.5,
+    "ROC_AUC": 0.965059,
+    "PR_AUC": 0.835093,
+    "F1": 0.845878,
+    "Precision": 0.900763,
+    "Recall": 0.797297,
+    "Confusion_Matrix": [
+      [
+        85282,
+        13
+      ],
+      [
+        30,
+        118
+      ]
+    ],
+    "notes": "DART 4000 trees 15 trials seed=42. Params: {'learning_rate': 0.012376523970438383, 'num_leaves': 80, 'max_depth': 13, 'min_child_samples': 72, 'subsample': 0.5825468546642414, 'subsample_freq': 6, 'colsample_bytree': 0.5037151528968412, 'reg_alpha': 0.010111197171308808, 'reg_lambda': 0.2594431932188164, 'min_split_gain': 0.002955575443702211, 'drop_rate': 0.2213332267594549, 'skip_drop': 0.6189034617800054, 'max_drop': 10}"
+  },
+  {
+    "model": "LightGBM_DART2_v6",
+    "timestamp": "2026-06-01T21:24:48.750343",
+    "threshold": 0.5,
+    "ROC_AUC": 0.969067,
+    "PR_AUC": 0.837593,
+    "F1": 0.860215,
+    "Precision": 0.916031,
+    "Recall": 0.810811,
+    "Confusion_Matrix": [
+      [
+        85284,
+        11
+      ],
+      [
+        28,
+        120
+      ]
+    ],
+    "notes": "DART same params seed=123"
+  },
+  {
+    "model": "XGBoost_gbdt_v6",
+    "timestamp": "2026-06-01T21:24:48.825687",
+    "threshold": 0.5,
+    "ROC_AUC": 0.964532,
+    "PR_AUC": 0.824534,
+    "F1": 0.827068,
+    "Precision": 0.932203,
+    "Recall": 0.743243,
+    "Confusion_Matrix": [
+      [
+        85287,
+        8
+      ],
+      [
+        38,
+        110
+      ]
+    ],
+    "notes": "XGBoost gbdt 25 trials. Params: {'n_estimators': 1239, 'learning_rate': 0.020276356193905158, 'max_depth': 6, 'min_child_weight': 19, 'subsample': 0.6820905048212829, 'colsample_bytree': 0.5513394572433321, 'colsample_bylevel': 0.5399261734587466, 'reg_alpha': 0.0014401045062167276, 'reg_lambda': 0.3142672562906403}"
+  },
+  {
+    "model": "CatBoost_v6",
+    "timestamp": "2026-06-01T21:24:48.897983",
+    "threshold": 0.5,
+    "ROC_AUC": 0.984681,
+    "PR_AUC": 0.812043,
+    "F1": 0.76489,
+    "Precision": 0.71345,
+    "Recall": 0.824324,
+    "Confusion_Matrix": [
+      [
+        85246,
+        49
+      ],
+      [
+        26,
+        122
+      ]
+    ],
+    "notes": "CatBoost 25 trials. Params: {'iterations': 4591, 'learning_rate': 0.040557587761382734, 'depth': 9, 'l2_leaf_reg': 1.0720510061481092, 'bagging_temperature': 0.4312835179076387, 'random_strength': 0.003326959701472481, 'border_count': 248, 'min_data_in_leaf': 23}"
+  },
+  {
+    "model": "Ensemble_v6_rank",
+    "timestamp": "2026-06-01T21:24:48.971278",
+    "threshold": 0.5,
+    "ROC_AUC": 0.984681,
+    "PR_AUC": 0.812043,
+    "F1": 0.006905,
+    "Precision": 0.003464,
+    "Recall": 1.0,
+    "Confusion_Matrix": [
+      [
+        42721,
+        42574
+      ],
+      [
+        0,
+        148
+      ]
+    ],
+    "notes": "Rank average, 1 models (AUC>=0.980): ['catboost']"
+  },
+  {
+    "model": "LightGBM_DART1_v6",
+    "timestamp": "2026-06-01T23:28:34.803073",
+    "threshold": 0.5,
+    "ROC_AUC": 0.959645,
+    "PR_AUC": 0.821073,
+    "F1": 0.8,
+    "Precision": 0.816901,
+    "Recall": 0.783784,
+    "Confusion_Matrix": [
+      [
+        85269,
+        26
+      ],
+      [
+        32,
+        116
+      ]
+    ],
+    "notes": "DART 4000trees 10trials s42. P:{'learning_rate': 0.018863281560289408, 'num_leaves': 114, 'max_depth': 15, 'min_child_samples': 51, 'subsample': 0.5515655642935307, 'subsample_freq': 6, 'colsample_bytree': 0.7166774309054748, 'reg_alpha': 0.08578115978966296, 'reg_lambda': 0.4123429679579262, 'min_split_gain': 0.005213867455413132, 'drop_rate': 0.13787671785104016, 'skip_drop': 0.5567794989597434, 'max_drop': 11}"
+  },
+  {
+    "model": "LightGBM_DART2_v6",
+    "timestamp": "2026-06-01T23:28:34.882538",
+    "threshold": 0.5,
+    "ROC_AUC": 0.960774,
+    "PR_AUC": 0.816255,
+    "F1": 0.829268,
+    "Precision": 0.856115,
+    "Recall": 0.804054,
+    "Confusion_Matrix": [
+      [
+        85275,
+        20
+      ],
+      [
+        29,
+        119
+      ]
+    ],
+    "notes": "DART same params s123"
+  },
+  {
+    "model": "XGBoost_gbdt_v6",
+    "timestamp": "2026-06-01T23:28:34.971710",
+    "threshold": 0.5,
+    "ROC_AUC": 0.962411,
+    "PR_AUC": 0.816903,
+    "F1": 0.805861,
+    "Precision": 0.88,
+    "Recall": 0.743243,
+    "Confusion_Matrix": [
+      [
+        85280,
+        15
+      ],
+      [
+        38,
+        110
+      ]
+    ],
+    "notes": "XGB gbdt 25trials. P:{'n_estimators': 1098, 'learning_rate': 0.03772131863583821, 'max_depth': 6, 'min_child_weight': 20, 'subsample': 0.5324048506840241, 'colsample_bytree': 0.8070023267717028, 'colsample_bylevel': 0.6989507899092067, 'reg_alpha': 0.015015229298491658, 'reg_lambda': 0.35843457196606443}"
+  },
+  {
+    "model": "CatBoost_v6",
+    "timestamp": "2026-06-01T23:28:35.051513",
+    "threshold": 0.5,
+    "ROC_AUC": 0.980368,
+    "PR_AUC": 0.818251,
+    "F1": 0.789644,
+    "Precision": 0.757764,
+    "Recall": 0.824324,
+    "Confusion_Matrix": [
+      [
+        85256,
+        39
+      ],
+      [
+        26,
+        122
+      ]
+    ],
+    "notes": "CatBoost 25trials. P:{'iterations': 4058, 'learning_rate': 0.050682967804106076, 'depth': 11, 'l2_leaf_reg': 1.1318537988734638, 'bagging_temperature': 0.544361668946454, 'random_strength': 0.03452817060221603, 'border_count': 242, 'min_data_in_leaf': 25}"
+  },
+  {
+    "model": "Ensemble_v6_rank",
+    "timestamp": "2026-06-01T23:28:35.128559",
+    "threshold": 0.5,
+    "ROC_AUC": 0.980368,
+    "PR_AUC": 0.818251,
+    "F1": 0.006858,
+    "Precision": 0.003441,
+    "Recall": 0.993243,
+    "Confusion_Matrix": [
+      [
+        42720,
+        42575
+      ],
+      [
+        1,
+        147
+      ]
+    ],
+    "notes": "Rank avg 1 models: ['catboost']"
+  },
+  {
+    "model": "LightGBM_DART1_v6",
+    "timestamp": "2026-06-02T00:30:22.486296",
+    "threshold": 0.5,
+    "ROC_AUC": 0.981671,
+    "PR_AUC": 0.845179,
+    "F1": 0.863309,
+    "Precision": 0.923077,
+    "Recall": 0.810811,
+    "Confusion_Matrix": [
+      [
+        85285,
+        10
+      ],
+      [
+        28,
+        120
+      ]
+    ],
+    "notes": "DART 4000t 10tr s42. P:{'learning_rate': 0.018378653465263645, 'num_leaves': 69, 'max_depth': 14, 'min_child_samples': 52, 'subsample': 0.5659946039144008, 'subsample_freq': 7, 'colsample_bytree': 0.5656610862467277, 'reg_alpha': 0.015952382581621717, 'reg_lambda': 0.3857492146251699, 'min_split_gain': 0.004729366712408065, 'drop_rate': 0.10656980859859128, 'skip_drop': 0.5846604581761219, 'max_drop': 17}"
+  },
+  {
+    "model": "LightGBM_DART2_v6",
+    "timestamp": "2026-06-02T00:30:22.568331",
+    "threshold": 0.5,
+    "ROC_AUC": 0.962505,
+    "PR_AUC": 0.822978,
+    "F1": 0.819444,
+    "Precision": 0.842857,
+    "Recall": 0.797297,
+    "Confusion_Matrix": [
+      [
+        85273,
+        22
+      ],
+      [
+        30,
+        118
+      ]
+    ],
+    "notes": "DART same params s123"
+  },
+  {
+    "model": "LightGBM_DART3_v6",
+    "timestamp": "2026-06-02T00:30:22.647698",
+    "threshold": 0.5,
+    "ROC_AUC": 0.946281,
+    "PR_AUC": 0.826566,
+    "F1": 0.833922,
+    "Precision": 0.874074,
+    "Recall": 0.797297,
+    "Confusion_Matrix": [
+      [
+        85278,
+        17
+      ],
+      [
+        30,
+        118
+      ]
+    ],
+    "notes": "DART same params s999"
+  },
+  {
+    "model": "XGBoost_gbdt_v6",
+    "timestamp": "2026-06-02T00:30:22.727905",
+    "threshold": 0.5,
+    "ROC_AUC": 0.983983,
+    "PR_AUC": 0.796094,
+    "F1": 0.727273,
+    "Precision": 0.642487,
+    "Recall": 0.837838,
+    "Confusion_Matrix": [
+      [
+        85226,
+        69
+      ],
+      [
+        24,
+        124
+      ]
+    ],
+    "notes": "XGB gbdt 25tr. P:{'n_estimators': 1491, 'learning_rate': 0.08446056512846012, 'max_depth': 7, 'min_child_weight': 6, 'subsample': 0.753484101921817, 'colsample_bytree': 0.5376251469805986, 'colsample_bylevel': 0.6363390068425618, 'reg_alpha': 0.004423735513520742, 'reg_lambda': 0.83316008587634}"
+  },
+  {
+    "model": "CatBoost_v6",
+    "timestamp": "2026-06-02T00:30:22.806048",
+    "threshold": 0.5,
+    "ROC_AUC": 0.98235,
+    "PR_AUC": 0.795317,
+    "F1": 0.768254,
+    "Precision": 0.724551,
+    "Recall": 0.817568,
+    "Confusion_Matrix": [
+      [
+        85249,
+        46
+      ],
+      [
+        27,
+        121
+      ]
+    ],
+    "notes": "Cat 25tr. P:{'iterations': 4958, 'learning_rate': 0.06769868134353547, 'depth': 12, 'l2_leaf_reg': 0.9067276486860129, 'bagging_temperature': 0.3829000597919009, 'random_strength': 0.001583706803654281, 'border_count': 231, 'min_data_in_leaf': 16}"
+  },
+  {
+    "model": "Ensemble_v6_rank",
+    "timestamp": "2026-06-02T00:30:22.883126",
+    "threshold": 0.5,
+    "ROC_AUC": 0.988156,
+    "PR_AUC": 0.826655,
+    "F1": 0.007284,
+    "Precision": 0.003655,
+    "Recall": 1.0,
+    "Confusion_Matrix": [
+      [
+        44952,
+        40343
+      ],
+      [
+        0,
+        148
+      ]
+    ],
+    "notes": "Rank avg 3 models: ['lgb_dart_1', 'xgb_gbdt', 'catboost']"
+  }
+]
