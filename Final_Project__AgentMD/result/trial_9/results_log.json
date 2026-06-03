@@ -1,0 +1,86 @@
+[
+  {
+    "model": "DART_avg10_v7",
+    "timestamp": "2026-06-03T06:13:51.550182",
+    "threshold": 0.5,
+    "ROC_AUC": 0.976664,
+    "PR_AUC": 0.843363,
+    "F1": 0.857143,
+    "Precision": 0.909091,
+    "Recall": 0.810811,
+    "Confusion_Matrix": [
+      [
+        85283,
+        12
+      ],
+      [
+        28,
+        120
+      ]
+    ],
+    "notes": "10-model DART average. Seeds=[42, 123, 999, 7, 17, 31, 55, 77, 101, 200]. Individual: min=0.9730, max=0.9787, std=0.0018. Individual AUCs: {42: 0.978736, 123: 0.974834, 999: 0.973221, 7: 0.975715, 17: 0.976192, 31: 0.976394, 55: 0.972959, 77: 0.975277, 101: 0.976848, 200: 0.973064}"
+  },
+  {
+    "model": "XGBoost_v7",
+    "timestamp": "2026-06-03T06:13:51.634919",
+    "threshold": 0.5,
+    "ROC_AUC": 0.975025,
+    "PR_AUC": 0.695554,
+    "F1": 0.417094,
+    "Precision": 0.279176,
+    "Recall": 0.824324,
+    "Confusion_Matrix": [
+      [
+        84980,
+        315
+      ],
+      [
+        26,
+        122
+      ]
+    ],
+    "notes": "Full V interactions. Params: {'n_estimators': 5000, 'learning_rate': 0.03639721413267157, 'max_depth': 5, 'min_child_weight': 17, 'subsample': 0.6473646487880343, 'colsample_bytree': 0.6459685400105613, 'colsample_bylevel': 0.5673498018256034, 'colsample_bynode': 0.7270715908832737, 'reg_alpha': 0.006485023656280716, 'reg_lambda': 0.06608851737350316, 'gamma': 0.07376540084717507, 'scale_pos_weight': np.float64(594.1916167664671), 'eval_metric': 'auc', 'early_stopping_rounds': 80, 'random_state': 42, 'n_jobs': -1, 'tree_method': 'hist'}"
+  },
+  {
+    "model": "CatBoost_v7",
+    "timestamp": "2026-06-03T06:13:51.716299",
+    "threshold": 0.5,
+    "ROC_AUC": 0.980632,
+    "PR_AUC": 0.820512,
+    "F1": 0.779553,
+    "Precision": 0.739394,
+    "Recall": 0.824324,
+    "Confusion_Matrix": [
+      [
+        85252,
+        43
+      ],
+      [
+        26,
+        122
+      ]
+    ],
+    "notes": "Full V interactions. Params: {'learning_rate': 0.044808892172499046, 'depth': 11, 'l2_leaf_reg': 1.0198799959168647, 'bagging_temperature': 0.438991716460019, 'random_strength': 0.0020833560594491233, 'border_count': 249, 'min_data_in_leaf': 14}"
+  },
+  {
+    "model": "Ensemble_v7",
+    "timestamp": "2026-06-03T06:13:51.799510",
+    "threshold": 0.5,
+    "ROC_AUC": 0.983134,
+    "PR_AUC": 0.828784,
+    "F1": 0.007135,
+    "Precision": 0.00358,
+    "Recall": 1.0,
+    "Confusion_Matrix": [
+      [
+        44107,
+        41188
+      ],
+      [
+        0,
+        148
+      ]
+    ],
+    "notes": "3-model stable ensemble. weighted_rank: dart=0.334, xgb=0.155, cat=0.510"
+  }
+]
